@@ -1,5 +1,15 @@
 <div class="post-title">
-  <h3>{{model.title}}</h3>
+  {{#if titleEditMode}}
+    {{
+      edit-title
+      class="form-control"
+      value=model.title
+      focus-out="saveTitle"
+      insert-newline="saveTitle"
+    }}
+  {{else}}
+    <h3 {{action "editTitle" on="doubleClick"}}>{{model.title}}</h3>
+  {{/if}}
 </div>
 
 <div class="post-content">
