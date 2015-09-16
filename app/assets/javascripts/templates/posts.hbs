@@ -1,6 +1,8 @@
-{{#each photo in photos}}
-  <li>{{#link-to 'photos.edit' photo}}{{photo.title}}{{/link-to}}</li>
-{{/each}}
+<hr>
+<div class="text-center">
+  {{#link-to 'posts.new' class='btn btn-success'}}+ Add New Post{{/link-to}}
+</div>
+<hr>
 
 <ul class="list-unstyled blog-posts-list">
   {{#each post in model}}
