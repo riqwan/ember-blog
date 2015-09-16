@@ -12,7 +12,7 @@ EmberBlog.Post = DS.Model.extend({
 EmberBlog.Post.FIXTURES = [
   {
    id: 1,
-   title: 'Habibi Learns Ember.js',
+   title: 'Habibi Nazis Ember.js',
    content: 'This is a test description that just shows up as a description for the blog post. This is a test description that just shows up as a description for the blog post. This is a test description that just shows up as a description for the blog post.'
  },
  {

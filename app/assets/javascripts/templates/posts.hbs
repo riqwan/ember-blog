@@ -1,7 +1,11 @@
+{{#each photo in photos}}
+  <li>{{#link-to 'photos.edit' photo}}{{photo.title}}{{/link-to}}</li>
+{{/each}}
+
 <ul class="list-unstyled blog-posts-list">
   {{#each post in model}}
     <li class="blog-post-item">
-      <h4 class="title">{{post.title}}</h4>
+      <h4 class="title">{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h4>
       <p class="content-description">{{post.description}}</p>
     </li>
   {{/each}}
