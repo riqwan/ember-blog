@@ -1,6 +1,8 @@
 <ul class="list-unstyled blog-posts-list">
-  <li class="blog-post-item">
-    <h4 class="title">Testing Blog Post Title</h4>
-    <p class="content-description">This is a test description that just shows up as a description for the blog post.</p>
-  </li>
+  {{#each post in model}}
+    <li class="blog-post-item">
+      <h4 class="title">{{post.title}}</h4>
+      <p class="content-description">{{post.description}}</p>
+    </li>
+  {{/each}}
 </ul>
