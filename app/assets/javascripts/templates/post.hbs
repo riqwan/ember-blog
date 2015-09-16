@@ -9,6 +9,8 @@
     }}
   {{else}}
     <h3 {{action "editTitle" on="doubleClick"}}>{{model.title}}</h3>
+    <div {{action "editTitle" on="click"}} class="glyphicon glyhicon-btn glyphicon-pencil"></div>
+    <div {{action "removePost" on="click"}} class="glyphicon glyhicon-btn glyphicon-remove"></div>
   {{/if}}
 </div>
 
