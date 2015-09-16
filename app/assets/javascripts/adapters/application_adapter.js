@@ -4,4 +4,5 @@
 
 // });
 
-EmberBlog.ApplicationAdapter = DS.FixtureAdapter.extend();
+EmberBlog.ApplicationAdapter = DS.RESTAdapter.extend({});
+

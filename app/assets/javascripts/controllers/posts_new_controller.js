@@ -9,9 +9,13 @@ EmberBlog.PostsNewController = Ember.ObjectController.extend({
         content: content,
       });
 
-      post.save();
+      var _this = this;
 
-      this.transitionTo('post', post.id);
+      function transitionToPost(post) {
+        _this.transitionTo('post', post);
+      }
+
+      post = post.save().then(transitionToPost);
     },
   },
 });
