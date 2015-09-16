@@ -1,7 +1,6 @@
 EmberBlog.PostsNewController = Ember.ObjectController.extend({
   actions: {
     createPost: function() {
-      debugger;
       var title = $('#title').val();
       var content = $('#content').val();
 
