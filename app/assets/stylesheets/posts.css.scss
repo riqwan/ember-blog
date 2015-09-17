@@ -4,7 +4,6 @@
 }
 
 .blog-posts {
-  border: 1px solid #eee;
   margin-bottom: 50px;
 }
 
@@ -25,5 +24,13 @@
 
 .create-post-wrapper {
   padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.post-comments {
+  padding: 20px 0px;
+}
+
+.post-comment {
   border-bottom: 1px solid #eee;
 }

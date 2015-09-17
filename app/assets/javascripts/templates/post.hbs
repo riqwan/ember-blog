@@ -30,7 +30,12 @@
 </div>
 
 <div class="post-comments">
+  <h4>Comments</h4>
+  <hr>
   {{#each comment in model.comments}}
     <p>{{comment.content}}</p>
+    <hr>
+  {{else}}
+    <p>No comments</p>
   {{/each}}
 </div>

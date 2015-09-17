@@ -6,7 +6,7 @@ EmberBlog.Post = DS.Model.extend({
   description: function() {
     var content = this.get('content');
 
-    return content.substring(0, 140) + '...';
+    return content.substring(0, 140) + ' ...';
   }.property('content'),
 });
 
