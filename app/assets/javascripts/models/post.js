@@ -1,13 +1,12 @@
 EmberBlog.Post = DS.Model.extend({
   title: DS.attr('string'),
   content: DS.attr('string'),
-  createdAt: DS.attr('date'),
-  updatedAt: DS.attr('date'),
+  comments: DS.hasMany('comment', { async: true }),
 
   description: function() {
     var content = this.get('content');
 
-    return content.substring(0, 140);
+    return content.substring(0, 140) + '...';
   }.property('content'),
 });
 
@@ -16,11 +15,13 @@ EmberBlog.Post = DS.Model.extend({
 //     id: 1,
 //     title: 'Habibi Nazis Ember.js',
 //     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna lacus, congue non vehicula at, tempus sed risus. Proin sit amet lectus sed metus suscipit venenatis et at lectus. Curabitur laoreet mauris eget nulla venenatis aliquet. Mauris maximus lacinia urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis erat quis velit dignissim sodales. Phasellus pellentesque diam a nisl tristique, ac blandit nibh maximus. In hac habitasse platea dictumst. Duis vitae elit facilisis, suscipit enim sit amet, condimentum lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ultrices pretium sapien at laoreet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer facilisis, ex vel maximus lobortis, dui lorem interdum lacus, at sollicitudin tortor elit quis turpis. Nunc dictum tincidunt tempor. Aliquam nisl est, posuere vitae porttitor at, ullamcorper vel metus. Cras vitae aliquet eros. Donec venenatis semper enim, vitae accumsan velit. Integer ac dui feugiat, tristique turpis sit amet, ornare erat.',
+//     comments: ['1', '2'],
 //   },
 //   {
 //     id: 2,
 //     title: 'We must get rid of the Nazis',
 //     content: 'This is a test description that just shows up as a description for the blog post. This is a test description that just shows up as a description for the blog post. This is a test description that just shows up as a description for the blog post. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer facilisis, ex vel maximus lobortis, dui lorem interdum lacus, at sollicitudin tortor elit quis turpis. Nunc dictum tincidunt tempor. Aliquam nisl est, posuere vitae porttitor at, ullamcorper vel metus. Cras vitae aliquet eros. Donec venenatis semper enim, vitae accumsan velit. Integer ac dui feugiat, tristique turpis sit amet, ornare erat.',
+//     comments: ['3', '4'],
 //   },
 //   {
 //     id: 3,

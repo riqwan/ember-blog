@@ -28,3 +28,9 @@
     <p {{action "editContent" on="doubleClick"}}>{{model.content}}</p>
   {{/if}}
 </div>
+
+<div class="post-comments">
+  {{#each comment in model.comments}}
+    <p>{{comment.content}}</p>
+  {{/each}}
+</div>
